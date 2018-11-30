@@ -36,7 +36,7 @@ function login(req, res) {
     .then(user => {
       if (user && bcrypt.compareSync(creds.password, user.password)) {
         const token = generateToken(user)
-        res.status(200).json(token);
+        res.status(200).json({ message: 'welcome', token });
       } else {
         res.status(401).json({ message: 'you shall not pass!' });
       }
@@ -47,7 +47,7 @@ function login(req, res) {
 function getJokes(req, res) {
   axios
     .get(
-      'https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten'
+      'https://safe-falls-22549.herokuapp.com/random_ten'
     )
     .then(response => {
       res.status(200).json(response.data);
