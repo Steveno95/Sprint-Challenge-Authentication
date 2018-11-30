@@ -32,6 +32,9 @@ export default class Register extends Component {
             message: 'Registration successful',
             user: { ...initialUser },
           });
+          setTimeout(() => {
+            this.props.history.push(`/login`);
+          }, 800)
         } else {
           throw new Error();
         }
