@@ -82,8 +82,8 @@ class App extends Component {
                     {this.state.jokes.map(joke => 
                     <li key={joke.id} className="display-jokes"
                     >
-                    Type: {joke.type}
-                    Setup: {joke.setup}
+                    Type: {joke.type}<br></br>
+                    Setup: {joke.setup}<br></br>
                     Punchline: {joke.punchline}
                     </li>
                     )}
