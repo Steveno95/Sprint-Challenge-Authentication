@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import './component.css';
 
 const url = process.env.REACT_APP_API_URL;
 

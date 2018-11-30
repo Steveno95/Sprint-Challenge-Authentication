@@ -67,7 +67,8 @@ class App extends Component {
         <nav className="nav-container">
           <NavLink to="/" className="nav-link">Home</NavLink>
           <NavLink to="/login" className="nav-link">Login</NavLink>
-          <NavLink to="/register" className="nav-link">Register</NavLink>
+          <NavLink to="/register" className="nav-link">Register</NavLink><br></br>
+          <button onClick={this.onSignOut} className="sign-out">Sign Out</button>
         </nav>
         <section>
           <Switch>
@@ -87,7 +88,6 @@ class App extends Component {
                     </li>
                     )}
                   </ol>
-                  <button onClick={this.onSignOut} className="sign-out">Sign Out</button>
                 </React.Fragment>
               );
             }} />
