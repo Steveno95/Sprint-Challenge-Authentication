@@ -36,6 +36,7 @@ function login(req, res) {
     .then(user => {
       if (user && bcrypt.compareSync(creds.password, user.password)) {
         const token = generateToken(user)
+        req.session.token = token;
         res.status(200).json(token);
       } else {
         res.status(401).json({ message: 'you shall not pass!' });

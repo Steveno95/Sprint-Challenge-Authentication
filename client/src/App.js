@@ -5,6 +5,8 @@ import axios from 'axios';
 import { withRouter, Switch, Route, NavLink } from 'react-router-dom';
 import './App.css';
 
+axios.defaults.withCredentials = true
+
 const url = process.env.REACT_APP_API_URL;
 
 class App extends Component {
